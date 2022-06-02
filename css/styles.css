@@ -436,7 +436,7 @@ img {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked+.custom-checkbox__icon {
+.checkbox:checked+.custom-checkbox svg {
     opacity: 1;
 }
 
@@ -449,7 +449,7 @@ img {
     color: var(--accent-color);
 }
 
-.modal-form-butoon {
+.modal-form-button {
     margin-left: auto;
     margin-right: auto;
     padding: 10px 55px;
@@ -473,24 +473,31 @@ img {
     cursor: pointer;
 }
 
-.preference {
+.preference-section {
     padding-bottom: 0;
 }
 
 .invisible-title {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
-.preference-item:not(:last-child) {
+.preference__item:not(:last-child) {
     margin-right: 30px;
 }
 
-.preference-item {
+.preference__item {
     display: block;
     width: 270px;
 }
 
-.prefrence-icon {
+.prefrence__card {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -500,14 +507,12 @@ img {
     background-color: var(--background-color);
 }
 
-.prefrence-icon svg {
+.prefrence__icon {
     width: 70px;
     height: 70px;
 }
 
-.prefrence-icon use {}
-
-.preference-title {
+.preference__title {
     margin-bottom: 10px;
 
     font-weight: 700;
@@ -519,11 +524,13 @@ img {
     color: var(--title-color);
 }
 
-.prefrence-text {
+.prefrence__text {
     font-weight: 400;
     line-height: 1.7;
     letter-spacing: 0.03em;
 }
+
+/* Наші роботи */
 
 .title {
     margin-bottom: 50px;
@@ -537,17 +544,17 @@ img {
     color: var(--title-color);
 }
 
-.our-work-list>li:not(:last-child) {
+.work__item:not(:last-child) {
     margin-right: 30px;
 }
 
-.image-container {
+.work__image-container {
     position: relative;
     overflow: hidden;
     pointer-events: none;
 }
 
-.work-description {
+.work__description {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -562,30 +569,31 @@ img {
     text-transform: uppercase;
     color: var(--white);
     background-color: rgba(47, 48, 58, 0.8);
-
 }
 
-.team {
+/* Команда */
+
+.team-section {
     background-color: var(--background-color);
 }
 
-.team-item {
+.team__item {
     background-color: var(--white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
-.team-item:not(:last-child) {
+.team__item:not(:last-child) {
     margin-right: 30px;
 }
 
-.employee-description {
+.employee__description {
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
 
-.subtitle {
+.employee__subtitle {
     margin-bottom: 10px;
 
     font-weight: 500;
@@ -597,7 +605,7 @@ img {
     color: var(--title-color);
 }
 
-.team-text {
+.employee__text {
     margin-bottom: 15px;
     font-size: 16px;
     line-height: 1.2;
