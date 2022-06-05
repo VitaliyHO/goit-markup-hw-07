@@ -791,15 +791,15 @@ img {
 }
 
 /*! Стилі сторінки Portfolio */
-.filter-list {
+.filter {
     margin-bottom: 50px;
 }
 
-.filter-item:not(:last-child) {
+.filter__item:not(:last-child) {
     margin-right: 8px;
 }
 
-.filter-button {
+.filter__button {
     padding: 6px 22px;
 
     font-family: inherit;
@@ -821,18 +821,18 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.current-button {
+.filter__button--current {
     background-color: var(--accent-color);
     color: var(--white);
 }
 
-.filter-button:hover,
-.filter-button:focus {
+.filter__button:hover,
+.filter__button:focus {
     background-color: var(--accent-color);
     color: var(--white);
 }
 
-.project-item {
+.project__item {
     margin-right: 30px;
     margin-bottom: 30px;
 
@@ -841,17 +841,22 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-item:nth-child(3n) {
+.project__item:nth-child(3n) {
     margin-right: 0;
 }
 
-.project-item:nth-last-child(-n+3) {
+.project__item:nth-last-child(-n+3) {
     margin-bottom: 0;
 }
 
-.project-item:hover,
-.project-item:focus {
+.project__item:hover,
+.project__item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
 }
 
 .overlay {
@@ -860,6 +865,7 @@ img {
     height: 100%;
     top: 295px;
     left: 0;
+    pointer-events: none;
 
 
     padding-left: 25px;
@@ -872,7 +878,7 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay-text {
+.overlay__text {
     font-weight: 400;
     font-size: 18px;
     line-height: 1.55;
@@ -880,17 +886,18 @@ img {
     color: var(--white);
 }
 
-.project-item:hover .overlay {
-    transform: translatey(-295px);
+.project__item:hover .overlay {
+    transform: translateY(-295px);
+    pointer-events: all;
 }
 
-.project-description {
+.project__description {
     padding: 20px 24px;
     border: 1px solid var(--project-border-color);
     border-top: 0;
 }
 
-.project-title {
+.project__title {
     margin-bottom: 4px;
 
     font-weight: 700;
@@ -901,7 +908,7 @@ img {
     color: var(--title-color);
 }
 
-.project-text {
+.project__text {
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.03em;
