@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css"
     integrity="sha512-Y0MM+V6ymRKN2zStTqzQ227DWhhp4Mzdo6gnlRnuaNCbc+YN/ZH0sBCLTM4M0oSy9c9VKiCvd4Jk44aCLrNS5Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/main.min.css">
   <link rel="stylesheet" href="./css/styles.css" />
   <title>Портфолио WebStudio</title>
 </head>
@@ -47,7 +48,7 @@
   </header>
   <main class="portfolio">
     <section class="projects section">
-      <h1 class="invisible-title">Нашы работы</h1>
+      <h1 class="visually-hidden">Нашы работы</h1>
       <div class="container">
         <ul class="filter list flex-container">
           <li class="filter__item">
@@ -233,57 +234,58 @@
   </main>
   <footer class="footer">
     <div class="container footer-container flex-container">
-      <div class="logo-adress">
-        <a class="logo link" href="./index.html">Web<span class="logo-footer">Studio</span></a>
-        <address class="adress">
-          <ul class="adress-list list">
-            <li class="adress-item link">г. Киев, пр-т Леси Украинки, 26</li>
-            <li class="adress-item"><a class="adress-link link" href="mailto:info@example.com">info@example.com</a></li>
-            <li class="adress-item"><a class="adress-link link" href="tel:+380991111111">+38 099 111 11 11</a></li>
+      <div class="footer-adress">
+        <a class="logo link footer-logo" href="./index.html">Web<span class="logo logo--white">Studio</span></a>
+        <address>
+          <ul class="adress list">
+            <li class="adress__item link">г. Киев, пр-т Леси Украинки, 26</li>
+            <li class="adress__item"><a class="adress__link link" href="mailto:info@example.com">info@example.com</a>
+            </li>
+            <li class="adress__item"><a class="adress__link link" href="tel:+380991111111">+38 099 111 11 11</a></li>
           </ul>
         </address>
       </div>
       <div class="subscribe">
-        <h2 class="subscribe-title">Присоединяйтесь</h2>
+        <h2 class="subscribe__title">Присоединяйтесь</h2>
         <ul class="subscribe-list list flex-container">
-          <li class="subscribe-item">
-            <a href="" class="subscribe-link">
-              <svg>
+          <li class="social__item">
+            <a href="" class="social__link social__link--white">
+              <svg class="social__icon">
                 <use href="./image/icons/icons.svg#instagram" width="20" height="20"></use>
               </svg>
             </a>
           </li>
-          <li class="subscribe-item">
-            <a href="" class="subscribe-link link">
-              <svg>
+          <li class="social__item">
+            <a href="" class="social__link social__link--white link">
+              <svg class="social__icon">
                 <use href="./image/icons/icons.svg#twitter" width="20" height="20"></use>
               </svg>
             </a>
           </li>
-          <li class="subscribe-item">
-            <a href="" class="subscribe-link">
-              <svg>
+          <li class="social__item">
+            <a href="" class="social__link social__link--white">
+              <svg class="social__icon">
                 <use href="./image/icons/icons.svg#facebook" width="20" height="20"></use>
               </svg>
             </a>
           </li>
-          <li class="subscribe-item">
-            <a href="" class="subscribe-link">
-              <svg>
+          <li class="social__item">
+            <a href="" class="social__link social__link--white">
+              <svg class="social__icon">
                 <use href="./image/icons/icons.svg#linkedin" width="20" height="20"></use>
               </svg>
             </a>
           </li>
         </ul>
       </div>
-      <form class="suscribe-form">
-        <label class="suscribe-field">
-          <b class="suscribe-label">Подпишитесь на рассылку</b>
-          <input class="subscribe-mail" type="email" name="user-email" placeholder="E-mail">
+      <form class="subscribe-form">
+        <label class="subscribe-form__field">
+          <b class="subscribe-form__label">Подпишитесь на рассылку</b>
+          <input class="subscribe-form__mail" type="email" name="user-email" placeholder="E-mail">
         </label>
-        <button class="submit-button" type="submit">
+        <button class="button button--with-icon" type="submit">
           Подписаться
-          <svg>
+          <svg class="button-icon">
             <use href="./image/icons/icons.svg#send" width="24" height="24"></use>
           </svg>
         </button>
