@@ -20,6 +20,10 @@
 
     color: var(--text-color);
 
+
+}
+
+.navigation__item {
     &:not(:last-child) {
         margin-right: 50px;
     }
@@ -69,11 +73,12 @@
     padding-left: 0;
     margin: 0;
 
-
-    &:not(:last-child) {
-        margin-right: 50px;
-    }
 }
+
+.contacts__item:not(:last-child) {
+    margin-right: 30px;
+}
+
 
 .contacts__link {
     display: flex;
